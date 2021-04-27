@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+:root{
+    --price-one:rgb(197, 6, 6);
+    --price-two:rgb(4, 87, 4);
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,39 +11,52 @@
 body{
     font-family:"Roboto", sans-serif;
     overflow: auto;
+    padding:0 3px;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+span{
+    display: inline-block;
 }
 
-
+li{
+    list-style: none;
+}
 /*------------------Main-header--------------------------*/
 #main-header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: center;
     background-color: #093e72;
     color: #fff;
-    padding: 1.5rem;
-    max-width: 100%;
-    margin: auto;
+    padding: .5rem;
+}
+#main-header #container{
+    display: flex;
+    margin: 0 2rem 1.5rem 2rem;
+}
+#main-header .container{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 1rem;
 }
 #main-header .logo{
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
+    margin: .5rem 2rem;
+    text-align: center;
 }
 #main-header i{
-    font-size: 4rem;
-    margin-left: 1rem;
+    font-size: 3rem;
     color: red;
 }
 #main-header h1{
-    text-transform: uppercase;
-}
-#contacts{
-    margin-left: 1rem;
+    text-transform: capitalize;
 }
 #contacts i{
-    font-size: 25px;
+    font-size: 1.5rem;
     color:red;
     margin-right: 5px;
 }
@@ -47,16 +64,14 @@ body{
     color: black;
 }
 #phone, #mail{
-    margin: .5rem;
-    letter-spacing: 2px;
+    margin-left: .5rem;
 }
-#phone a, #mail a{
-    text-decoration: none;
-    color: #fff;
-}
-
 
 /*-----search input------*/
+#search{
+    margin-top: 1.5rem;
+
+}
 #search form input[type="text"]{
     padding: .5rem;
     border-radius: 5px;
@@ -65,12 +80,13 @@ body{
     outline: none;
     opacity: .6;
     transition: width .5s;
+ 
 }
 #search form input[type="text"]:focus{
     opacity: 1;
     border: 1px solid rgba(81, 203, 238, 1);
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    width: 25rem;
+    width: 15rem;
 }
 #submit, .fas .fa-search{
     border: none;
@@ -83,33 +99,28 @@ body{
     cursor: pointer;
     text-align: center;
     display: inline-block;
-    z-index: 2;
 }
 #search i{
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 /*----Main navigation links-----*/
 #main-nav{
-    display: flex;
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 #main-nav ul{
     list-style: none;
 }
 #main-nav li{
     display: inline-block;
-}
-#main-nav a{
-    display: inline-block;
-    color:#fff;
-    text-decoration: none;
-    text-transform: capitalize;
-    margin: .3rem;
     padding: 2px;
 }
+#main-nav a{
+    text-transform: capitalize;
+    margin: .2rem;  
+}
 #main-nav a:hover{
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 
 /*login/sign up forms*/
@@ -146,8 +157,8 @@ body{
 
 /*-------------showcase---------------------*/
 #showcase{
-    min-height: 30vh;
-    background: url(https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)no-repeat center/cover;
+    min-height: 40vh;
+    background: url(https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80) no-repeat center/cover;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -156,20 +167,28 @@ body{
     text-align: center;
     position: relative;
 }
+#showcase h3, #showcase p, #showcase a{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+}
 #showcase h3{
     font-size: 3rem;
     line-height: 1.4;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-bottom: 7rem;
 }
 #showcase p{
     font-size: 1rem;
     letter-spacing: 2px;
     text-transform: capitalize;
+    margin-bottom: 3rem;
 }
 #showcase a{
-    color:#fff;
-    text-decoration: none;
     padding: .7rem 1.5rem;
     background: #093e72;
     border-radius: 5px;
@@ -179,6 +198,19 @@ body{
 #showcase a:hover{
     transform: scale(1.2);
 }
+#overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 /*----------Second navigation links*--------------*/
 #second-nav{
@@ -186,15 +218,14 @@ body{
    text-align: center;
    align-items: center;
    justify-content:space-around;
-   background-color: #ccc;
+   background-color:rgb(0,33,71);
+   color: #fff;
    padding: .8rem;
    margin: auto;
-   max-width: 100%;
    height: auto;
    position: sticky;
    top: 0;
    z-index: 1; 
-   overflow: hidden;
 }
 #second-nav ul{
     list-style: none;
@@ -202,35 +233,43 @@ body{
 #second-nav li, #dropdown{
     display: inline-block;
     position: relative;
+    padding: 5px;
 }
 #second-nav a,#dropdown-btn{
     text-decoration: none;
-    color: #000;
-    margin: .3rem;
+    color: #fff;
+    margin:.3rem;
     padding: 5px;
     border: 1px solid #093e72;
     border-radius: 5px;
     display: inline-block;
 }
+#dropdown-btn i{
+    margin-left: .5rem;
+    color: #fff;
+
+}
 #dropdown-content{
     display: none;
     position: absolute;
     background: #fff;
-    z-index: 1;
     min-width: 160px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 2;
 }
 #dropdown-content a{
     display: block;
     border: none;
+    color: #000;
 }
 #dropdown-content i{
     transition: .5s ease-in-out;
+    color: #000;
 }
 #dropdown-content:hover i{
     color: #fff;
-    transform: translateX(100%); 
+    transform: translateX(80%); 
 }
 #dropdown-content a:hover{
     background: #fff;
@@ -246,12 +285,12 @@ body{
 /*---Newsletter form---*/
 #second-nav form{
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 #second-nav h3{
     margin-right: 5px;
-    color: rgba(0, 0, 0,.8);
+    color:#fff;
+    text-transform: capitalize;
 }
 #second-nav [type="email"], [type="submit"]{
     padding: .5rem;
@@ -260,7 +299,7 @@ body{
     border: 1px #ddd solid;
 }
 #second-nav [type="email"]{
-    width: 20rem ;
+    width: 15rem ;
     border: 1px solid #093e72;
 }
 #second-nav [type="email"]:focus{
@@ -276,22 +315,8 @@ body{
     background: #093e72;
     color: #fff;
 }
-
-/*Social media*/
-#social-media{
-    margin-left: 20px;
-}
-#social-media a{
-    border: none;
-    font-size: 1.5rem;
-    padding: 0 10px;
-    margin: 0.5px;
-    color:red;
-}
-
 /*--------------Cards------------------*/
 main h2{
-    margin-top: 1rem;
     background: #093e72;
     color: #fff;
     padding: 3px;
@@ -305,7 +330,7 @@ main h2{
 }
 .product{
    max-height: 70vh;
-   margin: 5px;
+   margin: .5rem;
    padding: 5px;
    text-align: center;
    border-radius: 5px;
@@ -358,7 +383,7 @@ main h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30vw;
+    width: 20vw;
 }
 .table-filter #table-input{
     padding: .7rem;
@@ -390,15 +415,6 @@ caption{
     font-size: 1.5rem;
     margin: 1rem 0 .5rem 0;
 }
-caption a{
-    text-decoration: none;
-    color: red;
-    margin: 2rem;
-    border: 1px red solid;
-    border-radius: 5px;
-    padding: 5px;
-    
-}
 th{
     background-color: rgb(0,33,71);
     color: #fff;
@@ -407,6 +423,17 @@ th{
 td{
     padding: .2rem;
     border-bottom: 1px solid #093e72;
+    text-transform: capitalize;
+}
+td:nth-last-child(2){
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--price-one);
+}
+td:nth-last-child(3){
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--price-two);
 }
 tr{
     background-color:#fff;
@@ -431,7 +458,7 @@ tr:hover{
 
 /*..........links......*/
 #links{
-    padding: 1.5rem;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -442,9 +469,9 @@ tr:hover{
     color: #fff;
     margin: 2px;
     background-color: #093e72;
-    padding: 8px 1.5rem;
+    padding: 8px 1rem;
     border-radius: 5px;
-    margin: .5rem 2rem;
+    margin: .5rem 1rem;
 }
 
 /*-------------------------footer-----------------------------------*/
@@ -486,53 +513,151 @@ footer p{
 }
 
 /*------------Media queries--------------*/
+@media screen and (max-width: 986px){
+    #main-header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+    }
+    #main-header #container{
+        display: flex;
+        flex-direction: column;
+    }
+    #main-header .container{
+        display: flex;
+        flex-direction: column;
+    }
+    #main-header .container #contacts{
+        display: flex;
+    }
+    #main-header .container #contacts i{
+        font-size: 1.2rem;
+        margin-right: 2px;
+    }
+    #phone, #mail{
+        margin: 0 .2rem 1rem .2rem;
+    }
+    #main-header .logo{
+        margin: 1rem;
+        text-align: center;
+    }
+    #main-header .logo i{
+        font-size: 2rem;
+    }
+    #main-header h1{
+        margin-top: none;
+    }
+    #search form input[type="text"]:focus{
+        width: 15rem;
+    }
+    #main-nav{
+        margin-right: .5rem;
+    }
+    #main-nav a{
+        margin: .8rem;  
+    }
+    #second-nav{
+        padding: .3rem;
+    }
+    #second-nav form{
+        display: none
+    }
+}
 @media screen and (max-width: 800px){
     #main-header{
+        display: flex;
+        flex-direction: column;
         padding: .5rem;
-        font-size: .9rem;
+        font-size: 1.3rem;
     }
     #main-header i{
         font-size: 2rem;
     }
     #main-header h1{
-        text-transform: uppercase;
-        font-size: .85rem;
+        text-transform: capitalize;
+        font-size: 1rem;
+        font-size: 1.5rem;
     }
-
     #contacts{
-        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
     }
     #contacts i{
         font-size: 1.2rem;
     }
-    #submit i{
-        font-size: 1rem;
-        color: #fff;
-    }
-    #phone, #mail{
-        margin: .5rem;
-        letter-spacing: none;
-    }
-    #search form input[type="text"]{
+    #search{
         display: none;
-    }
-    #submit, .fas .fa-search{
-        position: relative;
-        padding:1px;
-        margin: auto;
-        color: #fff;
     }
     #main-nav{
         margin:auto;
     }
     #main-nav a{
-        margin: auto;
+        margin: 1rem;
     }
     #second-nav form{
         display: none;
     }
-    #dropdown-content i{
+    #second-nav ul i{
         display: none;
+    }
+    #second-nav li,#dropdown{
+        margin:0 1rem;
+    }
+    .table-filter #table-input{
+        width: 100%;
+    }
+    .table-filter #table-input:focus{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 100%;
+    }
+    table{
+        max-width: 50vw;
+    }
+    th{
+        padding: .4rem;
+    }
+    td{
+        padding: 2px;
+        border-bottom: 1px solid #093e72;
+    }
+    #product{
+        width: 10%;
+    }
+    #product:hover{
+        width: 20%;
+    }
+    #links{
+        padding: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #links a{
+        text-decoration: none;
+        color: #fff;
+        margin: 2px;
+        background-color: #093e72;
+        padding: .5rem .5rem;
+        border-radius: 5px;
+        margin: .5rem .5rem;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    footer p{
+        font-size: 1.5rem;
+        margin: .5rem 0;
+        text-transform: capitalize;
+    }
+    #main-footer{
+        margin-right:none;
+    }
+    #main-footer a{
+        color: #fff;
+        margin: 1rem;
+        display: inline-block;
     }
 
 }
@@ -544,48 +669,36 @@ footer p{
        justify-content: center;
        align-items: center;
        text-align: center;
-       font-size: .8rem;
-       line-height: normal;
-       max-width: 100vw;
+       font-size: 1.3rem;
        overflow: hidden;
    }
-   #main-header,.logo, h1 ,#contacts ,#phone ,#mail{
-       display: block;
+   #main-header h1{
+       text-transform: capitalize;
+       font-size: 1.5rem;
    }
    #main-header .logo i{
-       font-size: 1.5rem;
+       font-size: 1.8rem;
    }
    #main-header i{
        font-size: 1rem;
    }
-   #search form input[type="text"],#submit{
-       padding: 3px;
-       width: 50%;
-   }
-   #search form input[type="text"]:focus{
-    opacity: 1;
-    border: 1px solid rgba(81, 203, 238, 1);
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    width: 55%;
-   }
-   #submit, .fas .fa-search{
-       display:inline-block;
-       align-items: center;
-       width: 2rem;
+   #search{
+       display: none;
    }
    #main-nav{
        margin:.5rem auto;
    }
-   #main-nav a{
-       margin-left: 3rem;
-       border-bottom: 1px #fff solid;
-       padding: 3px;
-   }
-   
+   #main-nav li{
+    padding: 3px;
+}
+#contacts{
+    display: flex;
+    flex-direction: column;
+}
    /*showcase*/
    #showcase{
-       min-height: 15vh;
-   }
+    min-height: 25vh;
+}
    #showcase h3{
        margin-top: .5rem;
        font-size: 1.5rem;
@@ -610,7 +723,7 @@ footer p{
        margin:2px 1rem;
        display: inline-block;
        font-size: .9rem;
-       background-color: #fff;
+       background-color: #093e72;
    }
    #second-nav a i{
        display: none;
@@ -621,9 +734,7 @@ footer p{
    #second-nav form{
     display: none;
    }
-   #social-media{
-       display: none;
-   }
+
 
    /*cards*/
    main h2{

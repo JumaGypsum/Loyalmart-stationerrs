@@ -10,26 +10,34 @@
 </head>
 <body>
     <header id="main-header">
-        <a href="home.html" class="logo"><i class="far fa-edit"></i></a>
-        <a href="home.html" class="logo"><h1>loyalmart stationers</h1></a>
-        <div id="contacts">
-            <span id="phone"><i class="fas fa-mobile-alt"></i><a href="#">+254 711281242</a></span>
-            <span id="mail"><a href="mailto:sales.loyalmartstationers@gmail.com"><i class="fas fa-envelope"></i>sales.loyalmartstationers@gmail.com</a></span>
+        <div id="container">
+            <div class="logo">
+                <a href="home.html">
+                    <i class="far fa-edit"></i></a>
+                <a href="home.html">
+                    <h1>loyalmart stationers</h1></a>
+            </div>
+            <div id="search">
+                <form>
+                    <input type="text" placeholder="Find....." id="search-products">
+                   <button id="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
         </div>
-        <div id="search">
-            <form id="search-form">
-                <input type="text" placeholder="Search Products">
-               <button id="submit"><i class="fas fa-search"></i></button>
-            </form>
+        <div class="container">
+            <div id="contacts">
+                <span id="phone"><i class="fas fa-mobile-alt"></i><a href="#">+254711281242</a></span>
+                <span id="mail"><a href="mailto:sales.loyalmartstationers@gmail.com"><i class="fas fa-envelope"></i>sales.loyalmartstationers@gmail.com</a></span>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="catalogue.html">Quote</a></li>
+                    <li><a href="login.html" target="popup"  onclick="window.open('login.html','popup','width=801,height=800'); return false;">login</a></li>
+                    <li><a href="#">Download</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="home.html"a>Home</a></li>
-                <li><a href="catalogue.html">Cataloque</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="#">Download</a></li>
-            </ul>
-        </nav>
     </header>
     <section id="login">
         <h2>Already have an account? Sign in</h2>

@@ -10,26 +10,34 @@
 </head>
 <body>
     <header id="main-header">
-        <a href="home.html" class="logo"><i class="far fa-edit"></i></a>
-        <a href="home.html" class="logo"><h1>loyalmart stationers</h1></a>
-        <div id="contacts">
-            <span id="phone"><i class="fas fa-mobile-alt"></i><a href="#">+254711281242</a></span>
-            <span id="mail"><a href="mailto:sales.loyalmartstationers@gmail.com"><i class="fas fa-envelope"></i>sales.loyalmartstationers@gmail.com</a></span>
+        <div id="container">
+            <div class="logo">
+                <a href="home.html">
+                    <i class="far fa-edit"></i></a>
+                <a href="home.html">
+                    <h1>loyalmart stationers</h1></a>
+            </div>
+            <div id="search">
+                <form>
+                    <input type="text" placeholder="Find....." id="search-products">
+                   <button id="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
         </div>
-        <div id="search">
-            <form>
-                <input type="text" placeholder="Find....." id="search-products">
-               <button id="submit"><i class="fas fa-search"></i></button>
-            </form>
+        <div class="container">
+            <div id="contacts">
+                <span id="phone"><i class="fas fa-mobile-alt"></i><a href="#">+254711281242</a></span>
+                <span id="mail"><a href="mailto:sales.loyalmartstationers@gmail.com"><i class="fas fa-envelope"></i>sales.loyalmartstationers@gmail.com</a></span>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="catalogue.html">Quote</a></li>
+                    <li><a href="login.html" target="popup"  onclick="window.open('login.html','popup','width=801,height=800'); return false;">login</a></li>
+                    <li><a href="#">Download</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="catalogue.html">Catalogue</a></li>
-                <li><a href="login.html" target="popup"  onclick="window.open('login.html','popup','width=801,height=800'); return false;">login</a></li>
-                <li><a href="#">Download</a></li>
-            </ul>
-        </nav>
     </header>
     <header id="second-nav">
         <ul>
@@ -43,25 +51,29 @@
                     <a href="#">See all <i class="fas fa-caret-right"></i></a>
                 </div>
             </li>
-            <li><a href="#">School</a> </li>
-            <li><a href="#">General</a> </li>
-            <li><a href="#">Printing</a> </li>
+            <li id="dropdown">
+                <a href="#" id="dropdown-btn">School<i class="fas fa-caret-right"></i></a>
+                <div id="dropdown-content">
+                    <a href="#">Ex-books<i class="fas fa-angle-double-right"></i></a>
+                    <a href="#">Pencils<i class="fas fa-angle-double-right"></i></a>
+                    <a href="#">Crayons<i class="fas fa-angle-double-right"></i></a>
+                    <a href="#">Geometrical Sets<i class="fas fa-angle-double-right"></i></a>
+                    <a href="#">See all <i class="fas fa-caret-right"></i></a>
+                </div>
+                <li id="dropdown">
+                    <a href="#" id="dropdown-btn">Printing<i class="fas fa-caret-right"></i></a>
+                    <div id="dropdown-content">
+                        <a href="#">Receipt books<i class="fas fa-angle-double-right"></i></a>
+                        <a href="#">Business cards<i class="fas fa-angle-double-right"></i></a>
+                        <a href="#">Books of A/C<i class="fas fa-angle-double-right"></i></a>
+                        <a href="#">Pens<i class="fas fa-angle-double-right"></i></a>
+                        <a href="#">See all <i class="fas fa-caret-right"></i></a>
+                    </div>
+                </li>
         </ul>
         <div class="table-filter">
             <input type="text" placeholder="Search items" id="table-input">
         </div>
-        <div id="social-media">
-            <a href="https://www.facebook.com" target="_blank">
-                 <i class="fab fa-facebook"></i></a>
-             <a href="https://www.twitter.com" target="_blank">
-                 <i class="fab fa-twitter"></i></a>
-             <a href="https://www.instagram.com" target="_blank">
-                 <i class="fab fa-instagram"></i></a>
-             <a href="https://www.whatsapp.com" target="_blank">
-                 <i class="fab fa-whatsapp"></i></a>
-             <a href="https://www.youtube.com" target="_blank">
-             <i class="fab fa-youtube"></i></a>
-         </div>
     </header>
     <section id="catalogue">
         <section  id="tables">
@@ -89,7 +101,7 @@
                         <td>850</td>
                         <td>4650</td>
                         <td><a href="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-200-Pages-SL_Exercise-Books_780_1.jpeg" target="_blank" 
-                        title="Kasuku 200pgs A4"><img src="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-200-Pages-SL_Exercise-Books_780_1.jpeg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 200pgs A4"><img src="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-200-Pages-SL_Exercise-Books_780_1.jpeg" id="product"></a></td>
                     </tr>
                </tbody>
                <tbody>
@@ -101,7 +113,7 @@
                         <td>50</td>
                         <td>550</td>
                         <td>4400</td>
-                        <td><a href="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/93/346543/1.jpg?8063" target="_blank" title="Kasuku 120pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/93/346543/1.jpg?8063" alt="Kasuku exercise book 200pgs" id="product"></a> </td>
+                        <td><a href="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/93/346543/1.jpg?8063" target="_blank" title="Kasuku 120pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/93/346543/1.jpg?8063"  id="product"></a> </td>
                     </tr>
                </tbody>
                <tbody>
@@ -114,7 +126,7 @@
                         <td>480</td>
                         <td>4300</td>
                         <td><a href="
-                            https://watex.co.ke/wp-content/uploads/2020/04/Watex_kasuku-ex-bk-chip-96pgs-s-l-a4.jpg" target="_blank" title="Kasuku 96pgs A4"><img src="https://watex.co.ke/wp-content/uploads/2020/04/Watex_kasuku-ex-bk-chip-96pgs-s-l-a4.jpg" alt="Kasuku exercise book 200pgs" id="product"></a> </td>
+                            https://watex.co.ke/wp-content/uploads/2020/04/Watex_kasuku-ex-bk-chip-96pgs-s-l-a4.jpg" target="_blank" title="Kasuku 96pgs A4"><img src="https://watex.co.ke/wp-content/uploads/2020/04/Watex_kasuku-ex-bk-chip-96pgs-s-l-a4.jpg"  id="product"></a> </td>
                     </tr>
                </tbody>
                <tbody>
@@ -126,7 +138,7 @@
                         <td>35</td>
                         <td>420</td>
                         <td>4200</td>
-                        <td><a href="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-80-Pages-SL-_Exercise-Books_2190_1.jpeg" target="_blank" title="Kasuku 80pgs A4"> <img src="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-80-Pages-SL-_Exercise-Books_2190_1.jpeg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-80-Pages-SL-_Exercise-Books_2190_1.jpeg" target="_blank" title="Kasuku 80pgs A4"> <img src="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-80-Pages-SL-_Exercise-Books_2190_1.jpeg" id="product"></a></td>
                     </tr>
                </tbody>
                <tbody>
@@ -138,7 +150,7 @@
                         <td>30</td>
                         <td>350</td>
                         <td>4000</td>
-                        <td><a href="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-96-Pages-SL-_Exercise-Books_1335_1.jpeg" target="_blank" title="Kasuku 64pgs A4"> <img src="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-96-Pages-SL-_Exercise-Books_1335_1.jpeg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-96-Pages-SL-_Exercise-Books_1335_1.jpeg" target="_blank" title="Kasuku 64pgs A4"> <img src="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-96-Pages-SL-_Exercise-Books_1335_1.jpeg" id="product"></a></td>
                     </tr>
                </tbody>
                <tbody>
@@ -150,7 +162,7 @@
                         <td>25</td>
                         <td>300</td>
                         <td>3900</td>
-                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" id="product"></a></td>
                     </tr>
                </tbody>
                <tbody>
@@ -162,7 +174,7 @@
                         <td>50</td>
                         <td>500</td>
                         <td>4700</td>
-                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" id="product"></a></td>
                     </tr>
                </tbody>
                <tbody>
@@ -174,7 +186,7 @@
                         <td>50</td>
                         <td>500</td>
                         <td>4700</td>
-                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" id="product"></a></td>
                     </tr>
                </tbody>
             </table>
@@ -202,7 +214,7 @@
                         <td>480</td>
                         <td>4500</td>
                         <td><a href="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-200-Pages-SL_Exercise-Books_780_1.jpeg" target="_blank" 
-                        title="Kasuku 200pgs A4"><img src="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-200-Pages-SL_Exercise-Books_780_1.jpeg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 200pgs A4"><img src="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-200-Pages-SL_Exercise-Books_780_1.jpeg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -215,7 +227,7 @@
                         <td>260</td>
                         <td>4000</td>
                         <td><a href="
-                            https://watex.co.ke/wp-content/uploads/2020/04/Watex_kasuku-ex-bk-chip-96pgs-s-l-a4.jpg" target="_blank" title="Kasuku 96pgs A4"><img src="https://watex.co.ke/wp-content/uploads/2020/04/Watex_kasuku-ex-bk-chip-96pgs-s-l-a4.jpg" alt="Kasuku exercise book 200pgs" id="product"></a> </td>
+                            https://watex.co.ke/wp-content/uploads/2020/04/Watex_kasuku-ex-bk-chip-96pgs-s-l-a4.jpg" target="_blank" title="Kasuku 96pgs A4"><img src="https://watex.co.ke/wp-content/uploads/2020/04/Watex_kasuku-ex-bk-chip-96pgs-s-l-a4.jpg" id="product"></a> </td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -227,7 +239,7 @@
                         <td>20</td>
                         <td>220</td>
                         <td>3900</td>
-                        <td><a href="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-80-Pages-SL-_Exercise-Books_2190_1.jpeg" target="_blank" title="Kasuku 80pgs A4"> <img src="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-80-Pages-SL-_Exercise-Books_2190_1.jpeg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-80-Pages-SL-_Exercise-Books_2190_1.jpeg" target="_blank" title="Kasuku 80pgs A4"> <img src="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-80-Pages-SL-_Exercise-Books_2190_1.jpeg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -239,7 +251,7 @@
                         <td>18</td>
                         <td>180</td>
                         <td>3900</td>
-                        <td><a href="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-80-Pages-SL-_Exercise-Books_2190_1.jpeg" target="_blank" title="Kasuku 80pgs A4"> <img src="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-80-Pages-SL-_Exercise-Books_2190_1.jpeg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-80-Pages-SL-_Exercise-Books_2190_1.jpeg" target="_blank" title="Kasuku 80pgs A4"> <img src="https://copia.co.ke/wp-content/uploads/Kasuku-Exercise-Book-A4-80-Pages-SL-_Exercise-Books_2190_1.jpeg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -251,7 +263,7 @@
                         <td>13</td>
                         <td>150</td>
                         <td>3600</td>
-                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>    
@@ -263,7 +275,7 @@
                         <td>10</td>
                         <td>100</td>
                         <td>3500</td>
-                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -275,7 +287,7 @@
                         <td>15</td>
                         <td>160</td>
                         <td>3800</td>
-                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -287,7 +299,7 @@
                         <td>30</td>
                         <td>300</td>
                         <td>4000</td>
-                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -299,7 +311,7 @@
                         <td>15</td>
                         <td>160</td>
                         <td>3800</td>
-                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -311,7 +323,7 @@
                         <td>15</td>
                         <td>160</td>
                         <td>3800</td>
-                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>    
@@ -323,7 +335,7 @@
                         <td>25</td>
                         <td>260</td>
                         <td>3800</td>
-                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -335,7 +347,7 @@
                         <td>15</td>
                         <td>160</td>
                         <td>3800</td>
-                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        <td><a href="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" target="_blank" title="Kasuku 48pgs A4"><img src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/908843/1.jpg?9867" id="product"></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -363,7 +375,7 @@
                         <td>1080</td>
                         <td>5880</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -376,7 +388,7 @@
                         <td>1440</td>
                         <td>5200</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 2Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 2Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>   
                 </tbody>
                 <tbody>
@@ -389,7 +401,7 @@
                         <td>1800</td>
                         <td>5200</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 3Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 3Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -402,7 +414,7 @@
                         <td>2160</td>
                         <td>5100</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 4Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 4Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -415,7 +427,7 @@
                         <td>3360</td>
                         <td>5800</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 6Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 6Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -443,7 +455,7 @@
                         <td>1080</td>
                         <td>5880</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -456,7 +468,7 @@
                         <td>1440</td>
                         <td>5200</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 2Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 2Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -469,7 +481,7 @@
                         <td>1800</td>
                         <td>5200</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 3Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 3Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>           
@@ -482,7 +494,7 @@
                         <td>2160</td>
                         <td>5100</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 4Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 4Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -495,7 +507,7 @@
                         <td>3360</td>
                         <td>5800</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 6Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 6Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -523,7 +535,7 @@
                         <td>720</td>
                         <td>--</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -536,7 +548,7 @@
                         <td>320</td>
                         <td>2300</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 2Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 2Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>   
                 </tbody>
                 <tbody>
@@ -549,7 +561,7 @@
                         <td>300</td>
                         <td>5800</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 3Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 3Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -562,7 +574,7 @@
                         <td>200</td>
                         <td>2300</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 4Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 4Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -575,7 +587,7 @@
                         <td>150</td>
                         <td>--</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 6Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 6Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -603,7 +615,7 @@
                         <td>720</td>
                         <td>5500</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -616,7 +628,7 @@
                         <td>350</td>
                         <td>--</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 2Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 2Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>   
                 </tbody>
                 <tbody>
@@ -629,7 +641,7 @@
                         <td>180</td>
                         <td>--</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 3Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 3Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -653,7 +665,7 @@
                         <td>400</td>
                         <td>350</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>  
@@ -664,7 +676,7 @@
                         <td>800</td>
                         <td>700</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>  
@@ -675,7 +687,7 @@
                         <td>700</td>
                         <td>600</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>  
@@ -686,7 +698,7 @@
                         <td>1200</td>
                         <td>1100</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>  
@@ -697,7 +709,7 @@
                         <td>150</td>
                         <td>120</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
                 <tbody>  
@@ -708,7 +720,420 @@
                         <td>80</td>
                         <td>50</td>
                         <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
-                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" alt="Kasuku exercise book 200pgs" id="product"></a></td>
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="table" cellpadding="0" cellspacing="0">
+                <caption>Geometrical Sets</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>QTY</th>
+                        <th>Price/pc</th>
+                        <th>Price/Doz</th>
+                        <th>Price/ctn</th>
+                        <th>Images</th>
+                    </tr>
+                </thead>
+                <tbody>  
+                    <tr>
+                        <td>Oxford set</td>
+                        <td>Clear</td>
+                        <td>36/Box</td>
+                        <td>240</td>
+                        <td>2640</td>
+                        <td>7920</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Oxford set</td>
+                        <td>Metalic</td>
+                        <td>36/Box</td>
+                        <td>240</td>
+                        <td>2640</td>
+                        <td>7920</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Nataraj Set</td>
+                        <td>Clear</td>
+                        <td>12/Box</td>
+                        <td>200</td>
+                        <td>2400</td>
+                        <td>2400</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>ClassMate</td>
+                        <td>Clear</td>
+                        <td>36/Box</td>
+                        <td>200</td>
+                        <td>2400</td>
+                        <td>7200</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>M&G Set</td>
+                        <td>Clear</td>
+                        <td>36/Box</td>
+                        <td>180</td>
+                        <td>2160</td>
+                        <td>6480</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Veda set</td>
+                        <td>clear</td>
+                        <td>12/Box</td>
+                        <td>200</td>
+                        <td>2400</td>
+                        <td>7200</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Veda set</td>
+                        <td>Metalic</td>
+                        <td>12/Box</td>
+                        <td>200</td>
+                        <td>2400</td>
+                        <td>7200</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Pelikan set</td>
+                        <td>Metalic</td>
+                        <td>12/Box</td>
+                        <td>200</td>
+                        <td>2400</td>
+                        <td>7200</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Exper set</td>
+                        <td>metalic</td>
+                        <td>12/Box</td>
+                        <td>70</td>
+                        <td>720</td>
+                        <td>720</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Expert set</td>
+                        <td>metalic</td>
+                        <td>12/Box</td>
+                        <td>70</td>
+                        <td>720</td>
+                        <td>720</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody><tbody>  
+                    <tr>
+                        <td>Golf set</td>
+                        <td>metalic</td>
+                        <td>12/Box</td>
+                        <td>70</td>
+                        <td>720</td>
+                        <td>720</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Gold set</td>
+                        <td>metalic</td>
+                        <td>12/Box</td>
+                        <td>70</td>
+                        <td>720</td>
+                        <td>720</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Kofa set</td>
+                        <td>metalic</td>
+                        <td>12/Box</td>
+                        <td>70</td>
+                        <td>720</td>
+                        <td>720</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="table" cellpadding="0" cellspacing="0">
+                <caption>Foolscaps/Rulled Paper/Writting pad</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Brand</th>
+                        <th>QTY</th>
+                        <th>Price/pc</th>
+                        <th>Price/ctn</th>
+                        <th>Images</th>
+                    </tr>
+                </thead>
+                <tbody>  
+                    <tr>
+                        <td>Ksk Rulled Paper</td>
+                        <td>A4 Bank 500sheets </td>
+                        <td>Kasuku</td>
+                        <td>14/ctn</td>
+                        <td>350</td>
+                        <td>4500</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Ksk LooseLeaf</td>
+                        <td>A4 bank 50sheets</td>
+                        <td>Kasuku</td>
+                        <td>120/ctn</td>
+                        <td>50</td>
+                        <td>5800</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Kartasi Foolscap 116</td>
+                        <td>A4 Bank 500sheets</td>
+                        <td>Kartasi</td>
+                        <td>14/ctn</td>
+                        <td>330</td>
+                        <td>4480</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Kartasi Foolscap 117</td>
+                        <td>A4 Bank 500sheets</td>
+                        <td>Kartasi</td>
+                        <td>--</td>
+                        <td>750</td>
+                        <td>--</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Kartasi Writting pad</td>
+                        <td>A4 bank 80sheets</td>
+                        <td>Kartasi</td>
+                        <td>120/box</td>
+                        <td>120</td>
+                        <td>--</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Polar Rulled Paper</td>
+                        <td>A4 Bank 500sheets</td>
+                        <td>Polar</td>
+                        <td>20/B0x</td>
+                        <td>320</td>
+                        <td>--</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Vimit Rulled Paper</td>
+                        <td>A4 Newsprint 500sheets</td>
+                        <td>Vimit</td>
+                        <td>20/B0x</td>
+                        <td>250</td>
+                        <td>--</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Falcon Rulled Paper</td>
+                        <td>A4 Newsprint 500sheets</td>
+                        <td>Falcon</td>
+                        <td>20/B0x</td>
+                        <td>250</td>
+                        <td>--</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Ksk Rulled Paper</td>
+                        <td>A4 Newsprint 500sheets</td>
+                        <td>Kasuku</td>
+                        <td>14/B0x</td>
+                        <td>250</td>
+                        <td>--</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Ksk Graph paper</td>
+                        <td>A4 bank 500sheets</td>
+                        <td>Kasuku</td>
+                        <td>14/B0x</td>
+                        <td>380</td>
+                        <td>--</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="table" cellpadding="0" cellspacing="0">
+                <caption>Chalks</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Brand</th>
+                        <th>QTY</th>
+                        <th>Price/GROSS</th>
+                        <th>Price/CTN</th>
+                        <th>Images</th>
+                    </tr>
+                </thead>
+                <tbody>  
+                    <tr>
+                        <td>Dustless white</td>
+                        <td>Dustless white</td>
+                        <td>Omega</td>
+                        <td>144/ctn</td>
+                        <td>600</td>
+                        <td>7000</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Dustless Colored</td>
+                        <td>Dustless Colored</td>
+                        <td>Omega</td>
+                        <td>144/ctn</td>
+                        <td>800</td>
+                        <td>9000</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Dustless white</td>
+                        <td>Dustless white</td>
+                        <td>OfficePoint</td>
+                        <td>144/ctn</td>
+                        <td>600</td>
+                        <td>--</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Dustless Colored</td>
+                        <td>Dustless Colored</td>
+                        <td>OfficePoint</td>
+                        <td>144/ctn</td>
+                        <td>700</td>
+                        <td>--</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Dustless white</td>
+                        <td>Dustless white</td>
+                        <td>Nice</td>
+                        <td>144/ctn</td>
+                        <td>450</td>
+                        <td>--</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Dustless Colored</td>
+                        <td>Dustless Colored</td>
+                        <td>Nice</td>
+                        <td>144/ctn</td>
+                        <td>550</td>
+                        <td>550</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Chalk</td>
+                        <td>Non dustless white</td>
+                        <td>Success</td>
+                        <td>12/ctn</td>
+                        <td>150</td>
+                        <td>--</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
+                    </tr>
+                </tbody>
+                <tbody>  
+                    <tr>
+                        <td>Chalk</td>
+                        <td>Non dustless Colored</td>
+                        <td>Success</td>
+                        <td>12/ctn</td>
+                        <td>250</td>
+                        <td>--</td>
+                        <td><a href="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" target="_blank" 
+                        title="Kasuku 1Q Counterbook A4"><img src="https://advatech.co.ke/1558-large_default/kasuku-counter-book-a4-3quire-kasuku-counter-book-a4-3quire-057381024.jpg" id="product"></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -717,7 +1142,7 @@
     <section id="links">
         <a href="catalogue.html">Prev</a>
         <a href="page1.html">1</a>
-        <a href="#">2</a>
+        <a href="page2.html">2</a>
         <a href="#">3</a>
         <a href="#">4</a>
         <a href="#">5</a>
