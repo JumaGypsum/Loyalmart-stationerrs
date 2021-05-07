@@ -3,7 +3,9 @@
     --price-one:rgb(197, 6, 6);
     --price-two:rgb(4, 87, 4);
 }
-*{
+*,
+*::before,
+*::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -32,22 +34,22 @@ li{
     text-align: center;
     background-color: hsl(210, 85%, 24%);
     color: #fff;
+    padding: .3rem 0;
 }
 #main-header #container{
-    display: flex;
-    margin: 0 2rem 1.5rem 2rem;
+    margin-right: 1rem;
 }
 #main-header .container{
     display: flex;
-    flex-direction: row-reverse;
-    margin-left: 1rem;
-}
-#main-header .logo{
-    margin: .5rem 2rem;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
+#main-header .logo{
+    margin: .5rem 1rem;
+}
 #main-header i{
-    font-size: 3rem;
+    font-size: 2rem;
     color: red;
 }
 #main-header h1{
@@ -67,7 +69,7 @@ li{
 
 /*----Main navigation links-----*/
 #main-nav{
-    margin-right: 2rem;
+    margin-left: 2rem;
 }
 #main-nav ul{
     list-style: none;
@@ -128,33 +130,24 @@ li{
     text-align: center;
     position: relative;
 }
-#showcase h3, #showcase p, #showcase a{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: inline-block;
-}
 #showcase h3{
     font-size: 3rem;
     line-height: 1.4;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 7rem;
 }
 #showcase p{
     font-size: 1rem;
     letter-spacing: 2px;
     text-transform: capitalize;
-    margin-bottom: 3rem;
+    margin-top: .5rem;
 }
 #showcase a{
     padding: .7rem 1.5rem;
     background: #093e72;
     border-radius: 5px;
-    margin-top: 2rem;
     transition: .3s ease-out;
+    margin-top: 1rem;
 }
 #showcase a:hover{
     transform: scale(1.2);
@@ -181,7 +174,7 @@ li{
    justify-content:space-around;
    background-color:rgb(0,33,71);
    color: #fff;
-   padding: .8rem;
+   padding: .5rem;
    margin: auto;
    height: auto;
    position: sticky;
@@ -295,11 +288,11 @@ main h2{
    padding: 5px;
    text-align: center;
    border-radius: 5px;
-   transition: .5s ease-in-out;
+   transition: .3s ease-in-out;
 }
 .product:hover{
     box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transform: scale(1.1);
+   
 }
 .product-img{
     max-width: 100%;
@@ -344,11 +337,11 @@ main h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20vw;
+    width: 40rem;
 }
 .table-filter #table-input{
     padding: .7rem;
-    width: 50%;
+    width: 80%;
     border: 2px solid rgba(81, 203, 238, 1);
     border-radius: 5px;
     outline: none;
@@ -472,57 +465,84 @@ footer p{
     margin: .5rem;
     display: inline-block;
 }
+#main-footer a:hover{
+    color: red;
+}
+/*----------Serivices-----------*/
+#accordion-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#accordion-container h1{
+    font-size: 2.5rem;
+    background-color: #093e72;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto .5rem auto;
+}
+
+.accordion-item{
+    width: 70%;
+    background-color: #093e72;
+    border-radius: .4rem;
+    padding: 1rem;
+    margin: .5rem auto;
+}
+.accordion-link{
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, .8);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 0;
+}
+.accordion-link i{
+    color: #e7d5ff;
+    padding: .5rem;
+}
+.accordion-link .fa-minus{
+    display: none;
+}
+.answer{
+    overflow: hidden;
+    max-height: 0;
+    position: relative;
+    background-color:rgb(28,169,201);
+    transition: max-height .8s;
+    border-radius: .4rem;
+}
+.answer::before{
+    content: '';
+    position: absolute;
+    width: .6rem;
+    height: 100%;
+    background-color: #e7d5ff;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+}
+.answer p{
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, .6);
+    padding: 0 1rem;
+}
+.accordion-item:target .answer{
+    max-height: 20rem;
+}
+.accordion-item:target .accordion-link .fa-plus{
+    display: none;
+}
+.accordion-item:target .accordion-link .fa-minus{
+    display: block;
+}
+
 
 /*------------Media queries--------------*/
-@media screen and (max-width: 986px){
-    #main-header{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    #main-header #container{
-        display: flex;
-        flex-direction: column;
-    }
-    #main-header .container{
-        display: flex;
-        flex-direction: column;
-    }
-    #main-header .container #contacts{
-        display: flex;
-    }
-    #main-header .container #contacts i{
-        font-size: 1.2rem;
-        margin-right: 2px;
-    }
-    #phone, #mail{
-        margin: 0 .2rem 1rem .2rem;
-    }
-    #main-header .logo{
-        margin: 1rem;
-        text-align: center;
-    }
-    #main-header .logo i{
-        font-size: 2rem;
-    }
-    #main-header h1{
-        margin-top: none;
-    }
-    #search form input[type="text"]:focus{
-        width: 15rem;
-    }
-    #main-nav{
-        margin-right: .5rem;
-    }
-    #main-nav a{
-        margin: .8rem;  
-    }
-    #second-nav{
-        padding: .3rem;
-    }
-    #second-nav form{
-        display: none
-    }
-}
 @media screen and (max-width: 768px){
     #main-header{
         display: flex;
@@ -539,12 +559,13 @@ footer p{
     }
     #main-header h1{
         text-transform: capitalize;
-        font-size: 1.5rem;
-        margin-right: .5rem;
+        font-size: 1.8rem;
+        margin-right: 1rem;
     }
     #contacts{
         display: flex;
         justify-content: space-between;
+        margin-bottom: .5rem;
     }
     #contacts i{
         font-size: 1.2rem;
@@ -572,11 +593,11 @@ footer p{
         border-bottom: none;
     }
     .hamburger-menu{
-        width: 2rem;
+        width: 2.0rem;
         height: 1.7rem;
         position: fixed;
-        top: 1.5rem;
-        right: 3rem;
+        top: 1rem;
+        right: 1.5rem;
         cursor: pointer;
         display: flex;
         flex-direction: column;
@@ -601,7 +622,7 @@ footer p{
     .navbar{
         width: 200px;
         height: 100vh;
-        background-color: rgba(9, 61, 113, .8);
+        background-color: rgb(28,169,201);
         columns: #fff;
         position: fixed;
         top: 0;
@@ -646,13 +667,13 @@ footer p{
     .nav-link::before{
         top: 0;
         transform-origin:left;
-
     }
     .nav-link:hover::before,
     .nav-link:hover::after{
         transform: scaleX(1);
-
     }
+
+    /*--------------Showcase-----*/
     #showcase{
         height: 50vh;
         overflow: hidden;
@@ -727,7 +748,7 @@ footer p{
     }
 
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 568px){
     /*showcase*/
     #showcase{
         min-height: 35vh;

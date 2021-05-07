@@ -1,3 +1,12 @@
+//HAMBUGER MENU
+const menuIcon = document.querySelector('.hamburger-menu');
+const navbar = document.querySelector('.navbar');
+menuIcon.addEventListener('click', () => {
+    navbar.classList.toggle('change');
+})
+
+
+/*-------------------Filter Table Data-----------------*/
 // //VARIABLES
 // let input = document.getElementById('table-input');
 // input.addEventListener('keyup', filterProducts);
@@ -22,28 +31,17 @@
 //     }
 // }
 
-// let filterInput = document.getElementById('table-input');
-// filterInput.addEventListener('keyup', filterProducts);
-// const login = document.getElementById('login').addEventListener('click', function(){
-//     window.open('login.html','popup','width=801,height=800');
-//     return false;
-// });
+/*-----------------------Filter Tables--------------*/
 
-//HAMBUGER MENU
-const menuIcon = document.querySelector('.hamburger-menu');
-const navbar = document.querySelector('.navbar');
-menuIcon.addEventListener('click', () => {
-    navbar.classList.toggle('change');
-})     
+let filterInput = document.getElementById('table-input');
+filterInput.addEventListener('keyup', filterProducts);
+const login = document.getElementById('login').addEventListener('click', function(){
+    window.open('login.html','popup','width=801,height=800');
+    return false;
+});
 
-
-//FUNCTIONS
-//filter
 function filterProducts(){
-    //get value of input
     let filterValue = document.getElementById('table-input').value.toUpperCase();
-
-//get table data
     let tableData = document.getElementById('tables');
     let data = tableData.querySelectorAll('table');
     for(let i = 0; i < data.length; i++){
@@ -55,7 +53,6 @@ function filterProducts(){
             data[i].style.display = 'none';
         }
     }
-
     let table = document.getElementById('table');
     let tr = table.getElementsByTagName('tr');
     for(let j = 0; j < tr.length; j++){
