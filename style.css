@@ -430,9 +430,8 @@ tr:hover{
 
 /*-------------------------footer-----------------------------------*/
 footer{
+    padding: 1rem;
     background: #093e72;
-    min-height: 7rem;
-    margin-top: 3rem;
     display: flex;
     justify-content: space-around;
     color: #fff;
@@ -440,13 +439,12 @@ footer{
     text-align: center;
 }
 footer p{
-    font-size: 1.5rem;
-    margin-left: 1rem;
+    margin:0 1rem;
     text-transform: capitalize;
 }
 #terms a{
     color: #fff;
-    margin: .6rem;
+    margin:.3px .6rem;
     text-decoration: none;
 }
 #terms a:hover{
@@ -485,7 +483,7 @@ footer p{
 }
 
 .accordion-item{
-    width: 70%;
+    width: 95%;
     background-color: #093e72;
     border-radius: .4rem;
     padding: 1rem;
@@ -594,12 +592,13 @@ footer p{
         border-bottom: none;
     }
     .hamburger-menu{
-        width: 2.0rem;
-        height: 1.7rem;
+        width: 1.8rem;
+        height: 1.6rem;
         position: fixed;
         z-index: 2;
-        top: 1rem;
+        top: .6rem;
         right: 1.5rem;
+        margin: auto;
         cursor: pointer;
         display: flex;
         flex-direction: column;
@@ -678,7 +677,7 @@ footer p{
  
     /*--------------Showcase-----*/
     #showcase{
-        height: 50vh;
+        height: 40vh;
         overflow: hidden;
     }
     #second-nav{
@@ -749,6 +748,16 @@ footer p{
 
 }
 @media screen and (max-width: 568px){
+    #main-header .logo{
+        margin: 0 auto;
+        margin: 5px 1rem;
+    }
+    #main-header .logo i{
+        font-size: 1.5rem;
+    }
+    #main-header h1{
+        font-size: 1.4rem;
+    }
     /*showcase*/
     #showcase{
         min-height: 35vh;
@@ -768,13 +777,13 @@ footer p{
 
    /*second navigation*/
    #second-nav{
-       padding: .3rem;
+       padding: .2rem;
        display: flex;
        justify-content:center;
        align-items: center;
    }
    #second-nav a{
-       margin:2px 1rem;
+       margin:2px .1rem;
        display: inline-block;
        font-size: .9rem;
        background-color: #093e72;
@@ -844,8 +853,13 @@ footer p{
 
    /*table*/
    #tables{
-       display: none;
-   }
+    font-size: .6rem;
+    overflow-x: scroll;
+}
+    .table-filter{
+        margin: .5rem 0;
+        width: 20rem;
+    }
    #links{
        display: none;
    }
@@ -861,4 +875,18 @@ footer p{
        font-size: .8rem;
        margin: auto;
    }
+   footer p{
+       margin: 0 auto;
+   }
+   #main-footer{
+       margin: 0 auto;
+   }
+   #main-footer i{
+       font-size: 1.2rem;
+   }
+   #main-footer a{
+       margin: .6rem;
+   }
+
+ 
 }
