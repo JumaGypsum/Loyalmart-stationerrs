@@ -861,8 +861,15 @@ footer p{
         width: 20rem;
     }
    #links{
-       display: none;
+       padding:.5rem;
    }
+   #links a{
+    margin: none;
+    background-color: #093e72;
+    padding: 3px .3rem;
+    border-radius: 5px;
+    margin:.2rem;
+}
 
    /*footer*/
    footer{
@@ -877,6 +884,7 @@ footer p{
    }
    footer p{
        margin: 0 auto;
+       font-size: 1.2rem;
    }
    #main-footer{
        margin: 0 auto;
