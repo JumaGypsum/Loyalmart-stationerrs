@@ -6,7 +6,7 @@ menuIcon.addEventListener('click', () => {
 })
 
 
-/*-------------------Filter Table Data-----------------*/
+/*-------------Filter Table Data-----------------*/
 // //VARIABLES
 // let input = document.getElementById('table-input');
 // input.addEventListener('keyup', filterProducts);
