@@ -52,11 +52,12 @@ img{
     margin: .5rem 1rem;
 }
 #main-header i{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: red;
 }
 #main-header h1{
     text-transform: capitalize;
+    font-size: 1.5rem;
 }
 #contacts i{
     font-size: 1.5rem;
@@ -181,7 +182,7 @@ img{
    justify-content:space-around;
    background-color:rgb(0,33,71);
    color: #fff;
-   padding: .5rem;
+   padding: .2rem;
    margin: auto;
    height: auto;
    position: sticky;
@@ -415,25 +416,8 @@ tr:hover{
 
 }
 
-/*..........links......*/
-#links{
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-#links a{
-    text-decoration: none;
-    color: #fff;
-    margin: 2px;
-    background-color: #093e72;
-    padding: 8px 1rem;
-    border-radius: 5px;
-    margin: .5rem 1rem;
-}
-
 /*-------------------------footer-----------------------------------*/
+
 footer{
     padding: 1rem;
     background: #093e72;
@@ -543,6 +527,48 @@ footer p{
 .accordion-item:target .accordion-link .fa-minus{
     display: block;
 }
+
+/*-----------Office----------*/
+#o-container{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    height: 100vh;
+}
+#p-subtitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background-color: #093e72;
+
+}
+#p-subtitle ul{
+    list-style: none;
+    width: 100%;
+}
+#p-subtitle ul li{
+    margin: .3rem;
+}
+#p-subtitle ul li a{
+    border: 1px #fff solid;
+    border-radius: 5px;
+    color: #fff;
+    padding: .5rem;
+    width: 100%;
+    position: relative;
+    
+}
+#p-subtitle ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+#p-listing{
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 /*------------Media queries--------------*/
 @media screen and (max-width: 768px){
