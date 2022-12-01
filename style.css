@@ -89,43 +89,6 @@ img{
 #main-nav a:hover{
     border-bottom: 2px solid #fff;
 }
-
-/*login/sign up forms*/
-#login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem auto 0 auto;
-    width: 50%;
-    border-radius: 5px;
-    background: rgb(28,169,201);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-#login h2{
-    margin: 1.5rem;
-}
-#login input{
-    padding: 5px;
-    max-width: 300px;
-    border-radius: 5px;
-    margin: 5px;
-    outline: none;
-    border: 1px solid #ccc;
-    transition: width .5s;
-}
-#login input:focus{
-    border: 1px solid rgba(81, 203, 238, 1);
-}
-#login input[type= "text"]:focus{
-    width: 400px;
-}
-
-#login #button:hover{
-    background: #093e72;
-    color: #fff;
-}
-
 /*-------------showcase---------------------*/
 #showcase{
     min-height: 40vh;
