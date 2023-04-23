@@ -13,7 +13,13 @@
 body{
     font-family:"Roboto", sans-serif;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 a{
     display: inline-block;
     text-decoration: none;
@@ -28,6 +34,11 @@ li{
 }
 img{
     max-width: 100%;
+}
+/*Temporary menteinance*/
+p{
+    font-weight: bold;
+    margin: auto;
 }
 /*------------------Main-header--------------------------*/
 #main-header{
